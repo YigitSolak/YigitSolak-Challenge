@@ -49,11 +49,11 @@ fun init(ctx: &mut TxContext) {
     // TODO: Initialize the module by creating AdminCap
         // Hints:
         // Create AdminCap id with object::new(ctx)
-    let admin_cap = AdminCap {
+    let adminCap = AdminCap {
         id:object::new(ctx)
     };
     // TODO: Transfer it to the module publisher (ctx.sender()) using transfer::public_transfer() function
-    transfer::public_transfer(admin_cap,ctx.sender());
+    transfer::public_transfer(adminCap,ctx.sender());
 }
 
 public fun list_hero(nft: Hero, price: u64, ctx: &mut TxContext) {
